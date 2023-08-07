@@ -200,7 +200,7 @@ section::before,section::after {
     05. parallax 
 ========================================================================== */
 .parallax {
-    background:url(../img/night.png) fixed no-repeat center center;
+    background:url(../img/background.gif) fixed no-repeat center center;
     -webkit-background-size:/*@@prefixmycss->No equivalent*/;
     -moz-background-size:cover;
     -o-background-size:/*@@prefixmycss->No equivalent*/;
@@ -213,7 +213,7 @@ section::before,section::after {
     padding-bottom:130px;
 }
 .parallax.parallax2 {
-    background-image:url(../img/night.png);
+    background-image:url(../img/background.gif);
 }
 .bm10 {
     margin-bottom:10px !important;
