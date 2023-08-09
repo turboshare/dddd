@@ -21,10 +21,10 @@
     <!-- js -->
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
-<body data-spy="scroll" data-target="#navbar" data-offset="120" >
+<body data-spy="" data-target="#" data-offset="120" >
     
     <div id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
+        <div class="container">
             <div class="navbar-header visible-xs">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -40,11 +40,12 @@
             </a></div>
 
             <ul class="nav navbar-nav navbar-right">
-                <ul class="nav navbar-nav navbar-right">            <ul class="navbar-nav  ">
+                <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Home</a></li>
                 <li><a href="/MATICxGOLD.pdf">Plan</a></li>
-                <li><a href="/about"><a href="https://turboshare.github.io/dddd/about">About</a></a></li>
-                    
+                <li class="nav-item">
+                <a class="nav-link" href="https://turboshare.github.io/dddd/about" target="_blank"> About</a>
+              </li>
                 
                 <li><a href="https://polygonscan.com/address/">Contract</a></li>
                 <li><a href="/signup">Register</a></li>
@@ -53,7 +54,7 @@
                 <!--fix for scroll spy active menu element-->
                 <li style="display:none;"><a href="#header"></a></li>
 
-            </ul></ul></ul>
+            </ul>
         </div><!--/.navbar-collapse -->
         </div><!-- container -->
     </div><!-- menu -->
