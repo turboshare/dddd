@@ -471,8 +471,8 @@ function checkPool1() {
             else if (result[2] == 8) {
                 $('.pool1status').show();
                 $('.pool1status .card-status').addClass('bg-success');
-                $('.pool1status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool1transaction').html('Received No. of Payments ' + result[2]);
+                $('.pool1status .ribbon').addClass('text-success').html('<span class="bg-success">Done</span>');
+                $('.pool1transaction').html('No. of Payments Received ' + result[2]);
 
 
             }
@@ -480,7 +480,7 @@ function checkPool1() {
                 $('.pool1status').show();
                 $('.pool1status .card-status').addClass('bg-warning');
                 $('.pool1status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool1transaction').html('Received No. of Payments ' + result[2]);
+                $('.pool1transaction').html('No. of Payments Received ' + result[2]);
                 $('.currentautopoolno').html(1);
             }
 
@@ -508,8 +508,8 @@ function checkPool2() {
             else if (result[2] == 8) {
                 $('.pool2status').show();
                 $('.pool2status .card-status').addClass('bg-success');
-                $('.pool2status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool2transaction').html('Received No. of Payments ' + result[2]);
+                $('.pool2status .ribbon').addClass('text-success').html('<span class="bg-success">Done</span>');
+                $('.pool2transaction').html('No. of Payments Received ' + result[2]);
 
 
             }
@@ -517,7 +517,7 @@ function checkPool2() {
                 $('.pool2status').show();
                 $('.pool2status .card-status').addClass('bg-warning');
                 $('.pool2status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool2transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(2);
+                $('.pool2transaction').html('No. of Payments Received ' + result[2]); $('.currentautopoolno').html(2);
                 console.log("ok")
                 $('#numbersec').show()
                 
@@ -546,8 +546,8 @@ function checkPool3() {
             else if (result[2] == 8) {
                 $('.pool3status').show();
                 $('.pool3status .card-status').addClass('bg-success');
-                $('.pool3status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool3transaction').html('Received No. of Payments ' + result[2]);
+                $('.pool3status .ribbon').addClass('text-success').html('<span class="bg-success">Done</span>');
+                $('.pool3transaction').html('No. of Payments Received ' + result[2]);
 
 
             }
@@ -555,7 +555,7 @@ function checkPool3() {
                 $('.pool3status').show();
                 $('.pool3status .card-status').addClass('bg-warning');
                 $('.pool3status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool3transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(3);
+                $('.pool3transaction').html('No. of Payments Received ' + result[2]); $('.currentautopoolno').html(3);
             }
 
 
@@ -580,8 +580,8 @@ function checkPool4() {
             else if (result[2] == 8) {
                 $('.pool4status').show();
                 $('.pool4status .card-status').addClass('bg-success');
-                $('.pool4status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool4transaction').html('Received No. of Payments ' + result[2]);
+                $('.pool4status .ribbon').addClass('text-success').html('<span class="bg-success">Done</span>');
+                $('.pool4transaction').html('No. of Payments Received ' + result[2]);
 
 
             }
@@ -589,7 +589,7 @@ function checkPool4() {
                 $('.pool4status').show();
                 $('.pool4status .card-status').addClass('bg-warning');
                 $('.pool4status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool4transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(4);
+                $('.pool4transaction').html('No. of Payments Received' + result[2]); $('.currentautopoolno').html(4);
             }
     });
 
@@ -743,7 +743,7 @@ $(document).ready(function () {
                         <input class="currentuseridlink" type="text" id="myInput" style="opacity:0; height:0px;" />
                         <input class="currentuseridlinknew" type="text" id="myInput1" style="opacity:0; height:0px;"/>
                       <p class="mb-0 fs-16">Your Referral link : <span class="currentuseridlink"></span> &emsp; <span class="btn btn-warning" onclick="myFunction()"> <i class="fa fa-copy"></i></span></p>
-                      <p class="mb-0 fs-16"><a class="ethaddress" href="" target="_blank"> <span class="currentaddress"></span> <i class="fa fa fa-external-link"></i></a></p>
+                      <p class="mb-0 fs-16">Your Polygon Address<a class="ethaddress" href="" target="_blank"> <span class="currentaddress"></span> <i class="fa fa fa-external-link"></i></a></p>
                     </div>
                    </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 text-right d-flex d-block">
@@ -765,6 +765,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h2 class="card-title font-weight-bold">10 MATIC</h2>
+                        <p class="mb-5">No Referral Compulsory</p>
                         <p class="mb-5 pool1sequencue" style="display: none;">Your Sequence Number : <strong id="pool1sequencue"></strong> </p>
                         <button type="button" class="btn btn-primary pool1pay">Buy</button>
                         <p class="pool1transaction btn btn-primary disabled">Not Eligible</p>
@@ -782,6 +783,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h2 class="card-title font-weight-bold">50 MATIC</h2>
+                        <p class="mb-5">1 Referral Compulsory</p>
                       <p class="mb-5 pool2sequencue" style="display: none;">Your Sequence Number : <strong id="pool2sequencue"></strong> </p>
                         <button type="button" class="btn btn-danger pool2pay">Buy</button>
                         <p class="pool2transaction btn btn-primary disabled">Not Eligible</p>
@@ -799,6 +801,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h2 class="card-title font-weight-bold">100 MATIC</h2>
+                        <p class="mb-5">2 Referral Compulsory</p>
                       <p class="mb-5 pool3sequencue" style="display: none;">Your Sequence Number : <strong id="pool3sequencue"></strong> </p>
                         <button type="button" class="btn btn-success pool3pay">Buy</button>
                         <p class="pool3transaction btn btn-primary disabled">Not Eligible</p>
@@ -817,6 +820,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h2 class="card-title font-weight-bold">500 MATIC</h2>
+                        <p class="mb-5">3 Referral Compulsory</p>
                       <p class="mb-5 pool4sequencue" style="display: none;">Your Sequence Number : <strong id="pool4sequencue"></strong> </p>
                         <button type="button" class="btn btn-success pool4pay">Buy</button>
                         <p class="pool4transaction btn btn-primary disabled">Not Eligible</p>
