@@ -94,12 +94,6 @@
 
 </head>
 <body class="app">
-
-    <!-- Loader -->
-    <div id="loading">
-        <img src="https://maticforce.space/Home-Dashboard/Content/assets/images/other/loader.svg" class="loader-img" alt="Loader">
-    </div>
-
     <!-- PAGE -->
     <div class="page">
         <div class="page-main">
@@ -120,30 +114,6 @@
                 </div>
             </div>
             <!-- Top-header closed -->
-            <!-- Sidebar menu-->
-            <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-            <aside class="app-sidebar">
-                <div class="side-tab-body p-0 border-0" id="sidemenu-Tab">
-                    <div class="first-sidemenu">
-                        <div class="line-animations">
-                            <ul class="resp-tabs-list hor_1">
-                                
-                                 <li class="resp-tab-active active"><a href="https://maticforce.space/Home-Dashboard"><span class="side-menu__icon"></span><img src="https://maticforce.space/Home-Dashboard/Content/assets/img/homepage.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Home"></a></li>
-                                <li class="autopool"><a href="https://maticforce.space/SmartMatrix"><span class="side-menu__icon"></span><img src="https://maticforce.space/Home-Dashboard/Content/assets/img/m2.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="SmartMatrix"></a></li>
-                                <li class="trans"><a href="https://maticforce.space/Transaction"><span class="side-menu__icon"></span><img src="https://maticforce.space/Home-Dashboard/Content/assets/img/m3.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Transations"></a></li>
-                                <li class="team2"><a href="https://maticforce.space/Team"><span class="side-menu__icon"></span><img src="https://maticforce.space/Home-Dashboard/Content/assets/img/m4.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Team"></a></li>
-                                <li class="media2"><a href="https://maticforce.space/Media"><span class="side-menu__icon"></span><img src="https://maticforce.space/Home-Dashboard/Content/assets/img/m5.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Media"></a></li>
-                             
-                                <li class="logoutuser"><span class="side-menu__icon"></span><img src="https://maticforce.space/Home-Dashboard/Content/assets/img/m6.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Log out"></li>
-                          
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-            <!-- Sidemenu closed -->
-            <!-- App-content opened -->
-            <!-- App-content closed -->
         </div>
 
 <script> 
@@ -173,47 +143,7 @@ function getVariableData() {
          $('.Pool4count').html(result);
         $('.pool4_current_address').html("<a href=https://polygonscan.com/address/" + result + " target=_blank>" + result+ "</a>");
     });
-
-
-
-    myContractInstance.methods.pool5currUserID().call().then(function (result) {
-       
-            $('.Pool5count').html(result);
-        $('.pool5_current_address').html("<a href=https://polygonscan.com/address/" + result + " target=_blank>" + result + "</a>");
-    });
-
-    myContractInstance.methods.pool6currUserID().call().then(function (result) {
-        
-            $('.Pool6count').html(result);
-        $('.pool6_current_address').html("<a href=https://polygonscan.com/address/" + result + " target=_blank>" + result + "</a>");
-    });
-
-    myContractInstance.methods.pool7currUserID().call().then(function (result) {
-      
-            $('.Pool7count').html(result);
-        $('.pool7_current_address').html("<a href=https://polygonscan.com/address/" + result + " target=_blank>" + result + "</a>");
-    });
-
-    myContractInstance.methods.pool8currUserID().call().then(function (result) {
-       
-            $('.Pool8count').html(result);
-        $('.pool8_current_address').html("<a href=https://polygonscan.com/address/" + result + " target=_blank>" + result + "</a>");
-    });
-
-    myContractInstance.methods.pool9currUserID().call().then(function (result) {
-       
-            $('.Pool9count').html(result);
-        $('.pool9_current_address').html("<a href=https://polygonscan.com/address/" + result + " target=_blank>" + result + "</a>");
-    });
-
-    myContractInstance.methods.pool10currUserID().call().then(function (result) {
-        
-            $('.Pool10count').html(result);
-        $('.pool10_current_address').html("<a href=https://polygonscan.com/address/" + result + " target=_blank>" + result + "</a>");
-    });
-
-
-
+    
     myContractInstance.methods.currUserID().call().then(function (result) {
     
        
@@ -333,24 +263,7 @@ function getPoolPaymentReceived() {
                 else if (level == 4) {
                     referraltotal = parseFloat(referraltotal) + pool4_price;
                 }
-                else if (level == 5) {
-                    referraltotal = parseFloat(referraltotal) + pool5_price;
-                }
-                else if (level == 6) {
-                    referraltotal = parseFloat(referraltotal) + pool6_price;
-                }
-                else if (level == 7) {
-                    referraltotal = parseFloat(referraltotal) + pool7_price;
-                }
-                else if (level == 8) {
-                    referraltotal = parseFloat(referraltotal) + pool8_price;
-                }
-                else if (level == 9) {
-                    referraltotal = parseFloat(referraltotal) + pool9_price;
-                }
-                else if (level == 10) {
-                    referraltotal = parseFloat(referraltotal) + pool10_price;
-                }
+                
 
 
                 $('.totalpoolpayment').html(Math.round(1000000 * (referraltotal)) / 1000000);
@@ -504,10 +417,7 @@ function Transaction_Pool() {
         var pool2_price = 50;
         var pool3_price = 100;
         var pool4_price = 500;
-        var pool5_price = 1000;
-        var pool6_price = 5000;
-        var pool7_price = 10000;
-        var pool8_price = 50000;
+        
        
         if (!error) {
             $.each(log, function (key, value) {
@@ -584,12 +494,6 @@ function checkbuyLevel() {
                 checkPool2();
                 checkPool3();
                 checkPool4();
-                checkPool5();
-                checkPool6();
-                checkPool7();
-                checkPool8();
-                checkPool9();
-                checkPool10();
             }
        
 
@@ -734,143 +638,11 @@ function checkPool4() {
                 $('.pool4status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
                 $('.pool4transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(4);
             }
-
-       
-
     });
 
 }
 
-function checkPool5() {
-    myContractInstance.methods.pool5users(account).call().then(function (result) {
-        if(result[1] > 0){
-        $('#pool5sequencue').text(result[1])
-        $('#pool5sequencue').show();
-        $('.pool5sequencue').show();}
-       
-            if (!result[0]) {
-                $('.pool5pay').show();
-                $('.pool5transaction').hide();
-            }
-            else if (result[2] == 8) {
-                $('.pool5status').show();
-                $('.pool5status .card-status').addClass('bg-success');
-                $('.pool5status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool5transaction').html('Received No. of Payments ' + result[2]);
-
-
-            }
-            else if (result[2] < 8) {
-                $('.pool5status').show();
-                $('.pool5status .card-status').addClass('bg-warning');
-                $('.pool5status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool5transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(5);
-            }
-
-
-       
-
-    });
-
-}
-
-function checkPool6() {
-    myContractInstance.methods.pool6users(account).call().then(function (result) {
-        if(result[1] > 0){
-        $('#pool6sequencue').text(result[1])
-        $('#pool6sequencue').show();
-        $('.pool6sequencue').show();}
-        
-            if (!result[0]) {
-                $('.pool6pay').show();
-                $('.pool6transaction').hide();
-            }
-            else if (result[2] == 8) {
-                $('.pool6status').show();
-                $('.pool6status .card-status').addClass('bg-success');
-                $('.pool6status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool6transaction').html('Received No. of Payments ' + result[2]);
-
-
-            }
-            else if (result[2] < 8) {
-                $('.pool6status').show();
-                $('.pool6status .card-status').addClass('bg-warning');
-                $('.pool6status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool6transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(6);
-            }
-
-       
-    });
-
-}
-
-function checkPool7() {
-    myContractInstance.methods.pool7users(account).call().then(function ( result) {
-        if(result[1] > 0){
-        $('#pool7sequencue').text(result[1])
-        $('#pool7sequencue').show();
-        $('.pool7sequencue').show();}
-        
-            if (!result[0]) {
-                $('.pool7pay').show();
-                $('.pool7transaction').hide();
-            }
-            else if (result[2] == 8) {
-                $('.pool7status').show();
-                $('.pool7status .card-status').addClass('bg-success');
-                $('.pool7status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool7transaction').html('Received No. of Payments ' + result[2]);
-
-
-            }
-            else if (result[2] < 8) {
-                $('.pool7status').show();
-                $('.pool7status .card-status').addClass('bg-warning');
-                $('.pool7status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool7transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(7);
-            }
-
-
-
-        
-
-    });
-
-}
-
-function checkPool8() {
-    myContractInstance.methods.pool8users(account).call().then(function ( result) {
-        if(result[1] > 0){
-        $('#pool8sequencue').text(result[1])
-        $('#pool8sequencue').show();
-        $('.pool8sequencue').show();}
-       
-            if (!result[0]) {
-                $('.pool8pay').show();
-                $('.pool8transaction').hide();
-            }
-            else if (result[2] == 8) {
-                $('.pool8status').show();
-                $('.pool8status .card-status').addClass('bg-success');
-                $('.pool8status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool8transaction').html('Received No. of Payments ' + result[2]);
-
-
-            }
-            else if (result[2] < 8) {
-                $('.pool8status').show();
-                $('.pool8status .card-status').addClass('bg-warning');
-                $('.pool8status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool8transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(8);
-            }
-
-
-       
-
-    });
-
-}
+   
 
 $(document).ready(function () {
     $('.pool1pay').click(function (demo) {
@@ -947,123 +719,6 @@ $(document).ready(function () {
             alert('Please download and install Metamask and Loggin to account');
         }
     });
-
-    $('.pool5pay').click(function () {
-        try {
-            ethereum.enable();           
-
-            myContractInstance1.methods.buyPool5().send({ from: account, value: 1000000000000000000000, gas: 300000 })
-                .on('transactionHash', function (hash) {
-
-                    $('.pool5pay').hide();
-                    $('.pool5transaction').show();
-                    $('.pool5transaction').html('<a href="https://polygonscan.com/tx/' + hash + '">Track</a>');
-
-                });
-        }
-        catch (err) {
-            alert('Please download and install Metamask and Loggin to account');
-        }
-    });
-
-
-    $('.pool6pay').click(function () {
-        try {
-            ethereum.enable();
-
-            myContractInstance1.methods.buyPool6().send({ from: account, value: 5000000000000000000000, gas: 300000 })
-                .on('transactionHash', function (hash) {
-
-                    $('.pool6pay').hide();
-                    $('.pool6transaction').show();
-                    $('.pool6transaction').html('<a href="https://polygonscan.com/tx/' + hash + '">Track</a>');
-
-                });
-        }
-        catch (err) {
-            alert('Please download and install Metamask and Loggin to account');
-        }
-    });
-
-
-    $('.pool7pay').click(function () {
-        try {
-            ethereum.enable();
-
-            myContractInstance1.methods.buyPool7().send({ from: account, value: 10000000000000000000000, gas: 300000 })
-                .on('transactionHash', function (hash) {
-
-                    $('.pool7pay').hide();
-                    $('.pool7transaction').show();
-                    $('.pool7transaction').html('<a href="https://polygonscan.com/tx/' + hash + '">Track</a>');
-
-                });
-
-
-        }
-        catch (err) {
-            alert('Please download and install Metamask and Loggin to account');
-        }
-    });
-
-
-    $('.pool8pay').click(function () {
-        try {
-            ethereum.enable();
-
-            myContractInstance1.methods.buyPool8().send({ from: account, value: 50000000000000000000000, gas: 300000 })
-                .on('transactionHash', function (hash) {
-
-                    $('.pool8pay').hide();
-                    $('.pool8transaction').show();
-                    $('.pool8transaction').html('<a href="https://polygonscan.com/tx/' + hash + '">Track</a>');
-
-                });
-
-        }
-        catch (err) {
-            alert('Please download and install Metamask and Loggin to account');
-        }
-    });
-
-
-    $('.pool9pay').click(function () {
-        try {
-            ethereum.enable();
-            
-            myContractInstance1.methods.buyPool9().send({ from: account, value: 50000000000000000000, gas: 300000 })
-                .on('transactionHash', function (hash) {
-
-                    $('.pool9pay').hide();
-                    $('.pool9transaction').show();
-                    $('.pool9transaction').html('<a href="https://polygonscan.com/tx/' + hash + '">Track</a>');
-
-                });
-        }
-        catch (err) {
-            alert('Please download and install Metamask and Loggin to account');
-        }
-    });
-
-
-    $('.pool10pay').click(function () {
-        try {
-            ethereum.enable();
-           
-            myContractInstance1.methods.buyPool10().send({ from: account, value: 100000000000000000000, gas: 300000 })
-                .on('transactionHash', function (hash) {
-
-                    $('.pool10pay').hide();
-                    $('.pool10transaction').show();
-                    $('.pool10transaction').html('<a href="https://polygonscan.com/tx/' + hash + '">Track</a>');
-
-                });
-        }
-        catch (err) {
-            alert('Please download and install Metamask and Loggin to account');
-        }
-    });
-
 
 });
 </script>
@@ -1228,70 +883,7 @@ $(document).ready(function () {
                                         </div>
 
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <div class="row">
-                                        <div class=" d-flex">
-                                            <div class="">
-                                                <img src="https://maticforce.space/Smart/5.png" class="w-7 h-7" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="text-white mb-1 fs-12">Smart Matrix 5 Users</p>
-                                                <div class="h5 m-0 fs-14 text-warning"><span class="Pool5count"></span></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <div class="row">
-                                        <div class=" d-flex">
-                                            <div class="">
-                                                <img src="https://maticforce.space/Smart/6.png" class="w-7 h-7" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="text-white mb-1 fs-12">Smart Matrix 6 Users</p>
-                                                <div class="h5 m-0 fs-14 text-warning"><span class="Pool6count"></span></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <div class="row">
-                                        <div class=" d-flex">
-                                            <div class="">
-                                                <img src="https://maticforce.space/Smart/7.png" class="w-7 h-7" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="text-white mb-1 fs-12">Smart Matrix 7 Users</p>
-                                                <div class="h5 m-0 fs-14 text-warning"><span class="Pool7count"></span></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <div class="row">
-                                        <div class=" d-flex">
-                                            <div class="">
-                                                <img src="https://maticforce.space/Smart/8.png" class="w-7 h-7" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="text-white mb-1 fs-12">Smart Matrix 8 Users</p>
-                                                <div class="h5 m-0 fs-14 text-warning"><span class="Pool8count"></span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div>                           
                             </li>
                         </ul>
                     </div>
@@ -1300,143 +892,11 @@ $(document).ready(function () {
         </div>
         <!-- row closed -->
                  <!-- row opened -->
-        <div class="row">
-            <div class="col-md-12 col-lg-6 col-xl-3">
-                <div class="card overflow-hidden bg-primary">
-                    <div class="card-body bg-gradient-success">
-                        <div class="d-flex">
-                            <div class="">
-                                <p class="mb-2 h6">Referral Earning</p>
-                                <h2 class="mb-1 "><span class="totalreferral">0.00</span></h2>                          
-                            </div>
-                            <div class=" my-auto ml-auto">
-                                <div class="chart-wrapper text-center">
-                                    <img src="https://maticforce.space/Home-Dashboard/Content/assets/img/d3.png" class="h-7" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-3">
-                <div class="card overflow-hidden bg-gradient-secondary">
-                    <div class="card-body text-white">
-
-                        <div class="d-flex">
-                            <div class="">
-                                <p class="mb-2 h6">Smart Matrix Earning</p>
-                                <h2 class="mb-1 "><span class="totalpoolpayment">0.00</span></h2>
-                            </div>
-                            <div class=" my-auto ml-auto">
-                                <div class="chart-wrapper text-center">
-                                    <img src="https://maticforce.space/Home-Dashboard/Content/assets/img/d2.png" class="h-7" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-
-
-
-            <div class="col-md-12 col-lg-6 col-xl-3">
-                <div class="card overflow-hidden bg-teal">
-                    <div class="card-body text-white">
-                        <div class="d-flex">
-                            <div class="">
-                                <p class="mb-2 h6">Direct Team</p>
-                                <h2 class="mb-1 "><span class="referralcount">00</span></h2>
-                            </div>
-                            <div class=" my-auto ml-auto">
-                                <div class="chart-wrapper text-center">
-                                    <img src="https://maticforce.space/Home-Dashboard/Content/assets/img/d4.png" class="h-7" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-3">
-                <div class="card overflow-hidden" style="background-color:#004172;color:#fff;">
-
-                    <div class="card-body text-white">
-                        <div class="d-flex">
-                            <div class="">
-                                <p class="mb-2 h6">Indirect Team</p>
-                                <h2 class="mb-1 "><span class="indirect_referralcount">00</span></h2>
-                            </div>
-
-                            <div class=" my-auto ml-auto">
-                                <div class="chart-wrapper text-center">
-                                    <img src="https://maticforce.space/Home-Dashboard/Content/assets/img/d5.png" class="h-7" alt="">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-        </div>
+       
         <!-- row closed -->
         <!-- row opened -->
-<div style="text-align: center;"><a href="https://telegram.me/MaticForce_Space" target="_blank"><img border="0" data-original-height="86" data-original-width="200" height="64" src="https://maticforce.space/Join-Telegram-Channel.png" width="200" /></a></div>
-        <br>
-              <!-- row closed -->
-        <!-- row opened --><div class="btn-box">
-        <div class="separator" style="clear: both; text-align: center;"><a href="https://maticforce.space/mfstoken/?karma=0xcf03193dbdded91daff177fdae180b54b181a27e" style="margin-left: 1em; margin-right: 1em;" target=""><img border="0" data-original-height="1200" data-original-width="1200" height="200" src="https://maticforce.space/mfstoken/MFS-Token.png" width="200" /></a></div>
-          <h2 style="text-align: center;"><a class="btn1" href="https://maticforce.space/mfstoken/?karma=0xcf03193dbdded91daff177fdae180b54b181a27e"><b style="background-color: #fcff01;"><span style="color: #2b00fe;">Buy/Sell</span><span style="color: red;"> </span><span style="color: #bf9000;">MFS</span><span style="color: red;"> </span><span style="color: #2b00fe;">Token</span></b></a></h2><div><br /></div><div><br /></div>
-         </div> <!-- row closed -->
-          <!-- row opened -->
-        <div class="row hidden-xs">
-            <div class="col-md-12 col-lg-12 col-xl-8">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Matic / USD Rate</div>
-                        <div class="card-options">
-                            <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
-                            <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
-                            <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="pl-3 pr-3 pb-0">
-                        <script type="text/javascript">
-                            baseUrl = "https://widgets.cryptocompare.com/";
-                            var scripts = document.getElementsByTagName("script");
-                            var embedder = scripts[scripts.length - 1];
-                            var cccTheme = { "Tabs": { "activeBorderColor": "#6c63e8" } };
-                            (function () {
-                                var appName = encodeURIComponent(window.location.hostname);
-                                if (appName == "") { appName = "local"; }
-                                var s = document.createElement("script");
-                                s.type = "text/javascript";
-                                s.async = true;
-                                var theUrl = baseUrl + 'serve/v3/coin/chart?fsym=MATIC&tsyms=USD';
-                                s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-                                embedder.parentNode.appendChild(s);
-                            })();
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-sm-12 col-xl-4 col-md-12 ">
-                <div class="card">
-                    <div class="card-body p-0" style="height:700px;overflow:auto">
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="MaticForce_Space/161" data-width="100%"></script>                                            
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="MaticForce_Space/171" data-width="100%"></script>                      
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="MaticForce_Space/172" data-width="100%"></script>                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- row closed -->
+         
         <!-- row closed -->
               <!-- Banner opened -->
               <!-- row opened -->
@@ -1450,7 +910,7 @@ $(document).ready(function () {
                         <div class="ribbon ribbon-top-left"></div>
                     </div>
                     <div class="card-header text-center mx-auto">
-                        <h2 class="card-title font-weight-bold"><span class="badge  badge-info">Smart Matrix - 1</span></h2>
+                        <h2 class="card-title font-weight-bold"><span class="badge  badge-info">Matrix - 1</span></h2>
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5"><span class="badge  badge-success">10 MATIC</span></h1>
@@ -1470,7 +930,7 @@ $(document).ready(function () {
                         <div class="ribbon ribbon-top-left"><span class="bg-danger">New</span></div>
                     </div>
                     <div class="card-header text-center mx-auto">
-                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Smart Matrix - 2</span></h3>
+                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Matrix - 2</span></h3>
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5"><span class="badge  badge-success">50 MATIC</span></h1>
@@ -1490,7 +950,7 @@ $(document).ready(function () {
                         <div class="ribbon ribbon-top-left"><span class="bg-danger">New</span></div>
                     </div>
                     <div class="card-header text-center mx-auto">
-                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Smart Matrix - 3</span></h3>
+                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Matrix - 3</span></h3>
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5"><span class="badge  badge-success">100 MATIC</span></h1>
@@ -1511,7 +971,7 @@ $(document).ready(function () {
                         <div class="ribbon ribbon-top-left "><span class="bg-danger">New</span></div>
                     </div>
                     <div class="card-header text-center mx-auto">
-                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Smart Matrix - 4</span></h3>
+                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Matrix - 4</span></h3>
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5"><span class="badge  badge-success">500 MATIC</span></h1>
@@ -1524,92 +984,6 @@ $(document).ready(function () {
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-3 col-lg-3  col-xs-6">
-                <div class="card text-center overflow-hidden">
-                    <div class="pool5status">
-                        <div class="card-status"></div>
-                        <div class="ribbon ribbon-top-left "><span class="bg-danger">New</span></div>
-                    </div>
-                    <div class="card-header text-center mx-auto">
-                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Smart Matrix - 5</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="pricing-card-title mb-5"><span class="badge  badge-success">1000 MATIC</span></h1>
-                        <p class="mb-5">Globally <strong></strong> people pays  <br /><strong>1000</strong> MATIC each</p>
-                        <p class="mb-5">No Referral necessary</p>
-                      <p class="mb-5 pool5sequencue" style="display: none;">Your position number : <strong id="pool5sequencue"></strong> </p>
-                      <p class="mb-5 pool5paying" style="display: none;">Current Paying Sequence number: <strong id="pool5paying"></strong></p>
-                        <button type="button" class="btn btn-success pool5pay">Enter</button>
-                        <p class="pool5transaction btn btn-primary disabled">Not Eligible</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3  col-xs-6">
-                <div class="card text-center overflow-hidden">
-                    <div class="pool6status">
-                        <div class="card-status"></div>
-                        <div class="ribbon ribbon-top-left"><span class="bg-danger">New</span></div>
-                    </div>
-                    <div class="card-header text-center mx-auto">
-                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Smart Matrix - 6</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="pricing-card-title mb-5"><span class="badge  badge-success">5000 MATIC</span></h1>
-                        <p class="mb-5">Globally <strong></strong> people pays  <br /><strong>5000</strong> MATIC each</p>
-                        <p class="mb-5">No Referral necessary</p>
-                      <p class="mb-5 pool6sequencue" style="display: none;">Your position number : <strong id="pool6sequencue"></strong> </p>
-                      <p class="mb-5 pool6paying" style="display: none;">Current Paying Sequence number: <strong id="pool6paying"></strong></p>
-                        <button type="button" class="btn btn-success pool6pay">Enter</button>
-                        <p class="pool6transaction btn btn-primary disabled">Not Eligible</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3  col-xs-6">
-                <div class="card text-center overflow-hidden">
-                    <div class="pool7status">
-                        <div class="card-status"></div>
-                        <div class="ribbon ribbon-top-left"><span class="bg-danger">New</span></div>
-                    </div>
-                    <div class="card-header text-center mx-auto">
-                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Smart Matrix - 7</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="pricing-card-title mb-5"><span class="badge  badge-success">10000 MATIC</span></h1>
-                        <p class="mb-5">Globally <strong></strong> people pays  <br /><strong>10000</strong> MATIC each</p>
-                        <p class="mb-5">No Referral necessary</p>
-                      <p class="mb-5 pool7sequencue" style="display: none;">Your position number : <strong id="pool7sequencue"></strong> </p>
-                      <p class="mb-5 pool7paying" style="display: none;">Current Paying Sequence number: <strong id="pool7paying"></strong></p>
-                        <button type="button" class="btn btn-success pool7pay">Enter</button>
-                        <p class="pool7transaction btn btn-primary disabled">Not Eligible</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3  col-xs-6">
-                <div class="card text-center overflow-hidden">
-                    <div class="pool8status">
-                        <div class="card-status"></div>
-                        <div class="ribbon ribbon-top-left"><span class="bg-danger">New</span></div>
-                    </div>
-                    <div class="card-header text-center mx-auto">
-                        <h3 class="card-title font-weight-bold"><span class="badge  badge-info">Smart Matrix - 8</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="pricing-card-title mb-5"><span class="badge  badge-success">50000 MATIC</span></h1>
-                        <p class="mb-5">Globally <strong></strong> people pays  <br /><strong>50000</strong> MATIC each</p>
-                        <p class="mb-5">No Referral necessary</p>
-                      <p class="mb-5 pool8sequencue" style="display: none;">Your position number : <strong id="pool8sequencue"></strong> </p>
-                      <p class="mb-5 pool8paying" style="display: none;">Current Paying Sequence number: <strong id="pool8paying"></strong></p>
-                        <button type="button" class="btn btn-success pool8pay">Enter</button>
-                        <p class="pool8transaction btn btn-primary disabled">Not Eligible</p>
-                    </div>
-                </div>
-            </div>
-
-            
         <!-- row closed -->
 
     </div>
@@ -1617,36 +991,14 @@ $(document).ready(function () {
 
 
 <style>
-    .pool1pay, .pool2pay, .pool3pay, .pool4pay, .pool5pay, .pool6pay, .pool7pay, .pool8pay, .pool9pay, .pool10pay {
+    .pool1pay, .pool2pay, .pool3pay, .pool4pay {
         display: none
     }
 
-    .pool1status, .pool2status, .pool3status, .pool4status, .pool5status, .pool6status, .pool7status, .pool8status, .pool9status, .pool10status {
+    .pool1status, .pool2status, .pool3status, .pool4status {
         display: none
     }
 </style>
-
-
-
-        <!-- Footer opened -->
-        <footer class="footer-main leftmenu-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6  mt-2 mb-2 p-l-10">
-                        <span class="p-r-10">Contract address</span>
-                        <a href="https://polygonscan.com/address/0x243af0b6ce6f76e00e634d955218ba2dab27d1be" class="text-success" target="_blank">
-                            0x243af0b6ce6f76e00e634d955218ba2dab27d1be <i class="fa fa-external-link"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-6  mt-2 mb-2 text-center">
-                        Copyright © 2023 <a href="https://maticforce.space" class="fs-14 text-primary">https://maticforce.space</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Footer closed -->
-    </div>
-
     <!-- Back-to-top -->
     <a href="#top" id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
 <script type="text/javascript">
