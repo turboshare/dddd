@@ -173,7 +173,7 @@ function SigninPage(){
     //                $.notify({
     //                    icon: '',
     //                    title: "Congragulations! New User " + event.args._user + " Registered ",
-    //                    message: "Welcome to Matic Force"
+    //                    message: "Welcome to Matic X Gold"
     //                }, {
     //                        type: 'minimalist',
     //                        placement: {
@@ -335,7 +335,7 @@ $(document).ready(function () {
 
     function SignUpPay(account) {
         var add = $('[name="referral"]').val();
-        myContractInstance.methods.regUser(add).send({ from: account, value: 10000000000000000000, gas: 300000 })
+        myContractInstance.methods.regUser(add).send({ from: account, value: 10000000000000000000, gas: 500000 })
             .on('transactionHash', function (hash) {
                 $('.error').html('Pending : Transaction waiting for comfirmation');
                 $('.error').show();
@@ -379,7 +379,7 @@ $(document).ready(function () {
                             location.href = "https://maticx.gold/account";
                         }
                         else {
-                            $('.error').html('You need to register first');
+                            $('.error').html('You need to signup first');
                             $('.error').show();
                         }
                     
