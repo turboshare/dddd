@@ -6,14 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=1">
     <!-- css -->
-    <link rel="shortcut icon" href="img/logo.png" type="">
+    <link rel="shortcut icon" href="https://maticx.gold/img/logo.png" type="">
     
 <script>
         var account = localStorage.getItem("address");
 
         if (account == null) {
             alert("You are not Logged In. Please Login first..!!");
-           location.href = "https://maticx.gold/signin";
+           location.href = "https://maticx.gold/xgold/signin";
         }
     </script>
 <!-- Title -->
@@ -110,17 +110,17 @@ function getVariableData() {
 
     myContractInstance.methods.users(account).call().then(function (result1) {
         
-            $('.currentuseridlink').html("https://maticx.gold/signup?referralid=" + result1.id);
+            $('.currentuseridlink').html("https://maticx.gold/xgold/signup?referralid=" + result1.id);
 
 
 
 
-            $('.currentuseridlink').val("https://maticx.gold/signup?referralid=" + result1.id);
+            $('.currentuseridlink').val("https://maticx.gold/xgold/signup?referralid=" + result1.id);
 
 
 
 
-            $('.sharebutton').attr('data-url', "https://maticx.gold/signup?referralid=" + result1.id);
+            $('.sharebutton').attr('data-url', "https://maticx.gold/xgold/signup?referralid=" + result1.id);
             $('.currentuserid').html(result1.id);
             $('.currentaddress').html(account);
             $('.ethaddress').attr('href', 'https://polygonscan.com/address/' + account);
@@ -901,7 +901,7 @@ $(document).ready(function () {
    <script src="https://maticx.gold/net/sidebar.js"></script>
 
    <!-- Index js-->
-   <script src="https://maticx.gold/net/index2.js"></script>
+   <script src="https://maticx.gold/net"></script>
 
    <!-- Custom js-->
    <script src="https://maticx.gold/net/custom.js"></script>
@@ -913,14 +913,14 @@ $(document).ready(function () {
         $('.logoutuser').click(function () {
         
             var account = localStorage.removeItem("address", null);
-            location.href = "https://maticx.gold/signin";
+            location.href = "https://maticx.gold/xgold/signin";
         });
     });
     </script>
   
   
    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
- <script src="https://maticx.gold/socialjs.js"></script>
+ <script src="https://maticx.gold"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function (event) {
             socialjs.init({
