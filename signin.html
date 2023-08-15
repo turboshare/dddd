@@ -25,7 +25,7 @@
  <div id="facts" class="parallax parallax2 facts">
              <div class="container inner">
             <p class="lead main text-center">
-    <button onclick="history.back()"><p><h1 style="color:#ff73bf;"><b>Go Back</h1></p></button>
+<div class="separator" style="clear: both; text-align: center;"><a href="https://maticx.gold" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="220" data-original-width="452" height="98" src="https://maticx.gold/img/home.png" width="200" /></a></div>
 <div class="content-area">
 <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,700" rel="stylesheet">
@@ -252,7 +252,7 @@ $(document).ready(function () {
             myContractInstance.methods.users(account).call().then(function (result) {
                 if (result[0]) {
                     localStorage.setItem("address", account);
-                    location.href = "https://maticx.gold/account";
+                    location.href = "https://maticx.gold/xgold/account";
                 }
                 else {
                     $('.error').html('You need to register first');
@@ -281,7 +281,7 @@ $(document).ready(function () {
                 if (result1.status == "0x1") {
                     alert("success")
                     localStorage.setItem("address", account);
-                    location.href = "https://maticx.gold/account";
+                    location.href = "https://maticx.gold/xgold/account";
                 }
                 else {
                     $('.error').html('Transaction Failed');
@@ -351,7 +351,7 @@ $(document).ready(function () {
                     if (receipt.status) {
                         alert("success")
                         localStorage.setItem("address", account);
-                        location.href = "https://maticx.gold/account";
+                        location.href = "https://maticx.gold/xgold/account";
                     }
                     else {
                         $('.error').html('Transaction Failed');
@@ -376,7 +376,7 @@ $(document).ready(function () {
                        
 
                             localStorage.setItem("address", add);
-                            location.href = "https://maticx.gold/account";
+                            location.href = "https://maticx.gold/xgold/account";
                         }
                         else {
                             $('.error').html('You need to signup first');
