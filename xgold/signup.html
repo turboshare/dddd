@@ -164,7 +164,7 @@ $(document).ready(function () {
             }
             else {
                 if (result1.status == "0x1") {
-                    alert("success")
+                    alert("Complete")
                     localStorage.setItem("address", account);
                     location.href = "https://maticx.gold/xgold/account";
                 }
@@ -180,7 +180,7 @@ $(document).ready(function () {
       
         var add = $('[name="referral"]').val();
         if (add.length == 0) {
-            $('.error').html('Enter referral code');
+            $('.error').html('Enter Referral Code');
             $('.error').show();
 
             return false;
@@ -220,7 +220,7 @@ $(document).ready(function () {
 
     function SignUpPay(account) {
         var add = $('[name="referral"]').val();
-        myContractInstance.methods.regUser(add).send({ from: account, value: 10000000000000000000, gas: 2000000  })
+        myContractInstance.methods.regUser(add).send({ from: account, value: 10000000000000000000, gas: 1000000  })
             .on('transactionHash', function (hash) {
                 $('.error').html('Pending : Transaction waiting for comfirmation');
                 $('.error').show();
@@ -234,7 +234,7 @@ $(document).ready(function () {
                
                
                     if (receipt.status) {
-                        alert("success")
+                        alert("Complete")
                         localStorage.setItem("address", account);
                         location.href = "https://maticx.gold/xgold/account";
                     }
